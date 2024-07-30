@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+.main-container {
+    background-image: linear-gradient(135deg, #f5f5f5, #E7EBEE 37%, #cbcbcb);
+    height: 100vh;
+    overflow: auto;
+}
+
+.body-content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-container {
+    display: none;
+}
+
+.button-style {
+    padding: 15px 80px;
+    background-color: transparent;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+
+.start-btn {
+    border: none;
+    color: #000;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+.start-btn:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+    -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+}
+.start-btn:hover{
+    color: #fff;
+    background-color: #212529;
+}
+.start-btn:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+.start-btn:active {
+    top: 2px;
+}
+
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.1s;
+    transform: translate(-50%, 50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 1;
+}
+
+.form-container input {
+    width: 350px !important;
+    padding: 15px 10px;
+}
+
+.card-body {
+    background-color: #E7EBEE;
+    border: 1.5px solid #000;
+}
+
+.issue-cards {
+    overflow: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #212529; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #212529; 
+  }
+
+h1:hover ~ .cursor {
+    transform: scale(6);
+}
+
+.loader {
+    display: none;
+}
+
+.caret {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: black;
+    animation: blink 0.7s steps(1) infinite;
+    vertical-align: bottom;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
