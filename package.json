@@ -12,5 +12,8 @@
   "dependencies": {
     "express": "^4.19.2",
     "pa11y": "^8.0.0"
+  },
+  "devDependencies": {
+    "puppeteer": "^22.14.0"
   }
 }
