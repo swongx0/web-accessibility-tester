@@ -1,6 +1,6 @@
 const express = require('express')
 const pa11y = require('pa11y')
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 3000
 
 const app = express()
 
